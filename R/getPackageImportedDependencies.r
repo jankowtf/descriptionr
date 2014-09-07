@@ -29,6 +29,7 @@ setGeneric(name="getPackageImportedDependencies",
 #' @return \code{character}. 
 #' @describeIn getPackageImportedDependencies
 #' @export
+#' @import rapp.core.condition
 setMethod(f = "getPackageImportedDependencies", 
   signature = signature(
     from = "character"

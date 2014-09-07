@@ -1,12 +1,14 @@
+#' @title 
 #' Get Package Description
 #'
 #' @description 
-#' Get package description.
+#' Retrieves the content of a package's DESCRIPTION file.
 #' 
 #' @param from \strong{Signature argument}.
 #'    Object containing source information.
 #' @param fields \code{Signature argument}.
 #'    Object containing field name information.
+#' @param class_type \code{\link{character}}.
 #' @param drop \code{logical}.
 #'    If \code{TRUE} and the length of \code{fields} is 1, then a single 
 #'    character string with the value of the respective field is returned 
@@ -17,15 +19,19 @@
 #'    \code{\link{iconv}}, so the default \code{""} indicates the encoding of 
 #'    the current locale.
 #' @param strict \code{logical}.
-#'    \code{TRUE}: certain constellations trigger an error. \code{FALSE} (default): these 
+#'    \code{TRUE}: certain constellations trigger an error. 
+#'    \code{FALSE} (default): these 
 #'    conditions are only reflected by a return value of \code{NA} and 
 #'    possibly a corresponding warning. 
 #' @param ... Further arguments passed to subsequente functions:
-#'    \code{\link{[utils]packageDescription}}.
-#' @author Janko Thyson \email{janko.thyson@@rappster.de}
-#' @references \url{http://www.rappster.de/rapp.core.repos}
-#' @example inst/examples/getPackageDescription.R
-#' @export getPackageDescription
+#'    \code{\link[utils]{packageDescription}}.
+#' @example inst/examples/getPackageDescription.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescription-character-character-method}
+#' }
+#' @template author
+#' @template references
+#' @export
 setGeneric(name="getPackageDescription", 
   signature = c(
     "from",
@@ -42,14 +48,25 @@ setGeneric(name="getPackageDescription",
   standardGeneric("getPackageDescription")
 })
 
+#' @title 
+#' Get Package Description
+#'
+#' @description 
+#' Retrieves the content of a package's DESCRIPTION file.
+#' 
 #' @param from \code{\link{character}}.
 #' @param fields \code{\link{character}}.  
 #     A vector giving the tags of fields to return (if other fields occur in 
 #     the file they are ignored).  
 #' @return \code{character}. 
-#' @describeIn getPackageDescription
-#' @import rapp.core.library
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescription}
+#' }
+#' @example inst/examples/getPackageDescription.r
+#' @template author
+#' @template references
 #' @export
+#' @import rapp.core.condition
 setMethod(f = "getPackageDescription", 
   signature = signature(
       from = "character",
@@ -131,11 +148,23 @@ setMethod(f = "getPackageDescription",
   } 
 )
 
+#' @title 
+#' Get Package Description
+#'
+#' @description 
+#' Retrieves the content of a package's DESCRIPTION file.
+#' 
+#' @inheritParams getPackageDescription
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @return See signature \code{character,character}.
-#' @describeIn getPackageDescription
+#' @example inst/examples/getPackageDescription.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescription}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageDescription", 
   signature = signature(
@@ -163,10 +192,23 @@ setMethod(f = "getPackageDescription",
   } 
 )
 
+#' @title 
+#' Get Package Description
+#'
+#' @description 
+#' Retrieves the content of a package's DESCRIPTION file.
+#' 
+#' @inheritParams getPackageDescription
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{missing}}.  
-#' @return See signature \code{character,character}.
-#' @describeIn getPackageDescription
+#' @return See method 
+#'    \code{\link[rapp.core.description]{getPackageDescription-character-character-method}}.
+#' @example inst/examples/getPackageDescription.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescription}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageDescription", 
   signature = signature(
@@ -194,11 +236,24 @@ setMethod(f = "getPackageDescription",
   } 
 )
 
+#' @title 
+#' Get Package Description
+#'
+#' @description 
+#' Retrieves the content of a package's DESCRIPTION file.
+#' 
+#' @inheritParams getPackageDescription
 #' @param from \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @param fields \code{\link{missing}}.  
-#' @return See signature \code{character,character}.
-#' @describeIn getPackageDescription
+#' @return See method 
+#'    \code{\link[rapp.core.description]{getPackageDescription-character-character-method}}.
+#' @example inst/examples/getPackageDescription.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescription}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageDescription", 
   signature = signature(
@@ -225,8 +280,3 @@ setMethod(f = "getPackageDescription",
   
   } 
 )
-
-
-
-
-

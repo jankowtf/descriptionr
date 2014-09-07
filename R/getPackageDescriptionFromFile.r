@@ -49,6 +49,7 @@ setGeneric(name="getPackageDescriptionFromFile",
 #' @return \code{character}. 
 #' @describeIn getPackageDescriptionFromFile
 #' @export
+#' @import rapp.core.condition
 setMethod(f = "getPackageDescriptionFromFile", 
   signature = signature(
     from = "character",

@@ -1,8 +1,8 @@
 *.dll
+man/*
 packrat/lib*/
 packrat/src
 *.Rhistory
 *.Rproj.user
 .*so
 .*o
-
