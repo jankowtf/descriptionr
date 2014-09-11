@@ -13,7 +13,7 @@
 #'    (\code{TRUE}, default) 
 #'    or detailed result, i.e. check for each package library in \code{lib} 
 #'    (\code{FALSE}). 
-#' @example inst/examples/isPackageInstalled.R
+#' @example inst/examples/isPackageInstalled.r
 #' @seealso \code{
 #'    \link[rapp.core.library]{isPackageInstalled-character-character-method}
 #' } 
@@ -37,15 +37,17 @@ setGeneric(name="isPackageInstalled",
 #' Is Package Installed
 #'
 #' @description 
-#' Checks if package is installed.
+#' See generic: \code{\link[rapp.core.description]{isPackageInstalled}}
 #' 
 #' @inheritParams isPackageInstalled
 #' @param pkg \code{\link{character}}.  
 #' @param lib \code{\link{missing}}.  
 #' @return See method 
 #'    \code{\link[rapp.core.library]{isPackageInstalled-character-character-method}}
+#' @example inst/examples/isPackageInstalled.r
 #' @seealso \code{
-#'    \link[rapp.core.library]{isPackageInstalled}
+#'    \link[rapp.core.library]{isPackageInstalled},
+#'    \link[rapp.core.library]{isPackageInstalled-character-character-method}
 #' } 
 #' @template author
 #' @template references
@@ -74,13 +76,14 @@ setMethod(f = "isPackageInstalled",
 #' Is Package Installed
 #'
 #' @description 
-#' Checks if package is installed.
+#' See generic: \code{\link[rapp.core.description]{isPackageInstalled}}
 #' 
 #' @inheritParams isPackageInstalled
 #' @param pkg \code{\link{character}}.  
 #' @param lib \code{\link{character}}.  
 #' @return \code{\link{logical}}. \code{TRUE} if package is installed,
 #'    \code{FALSE} if it is not.
+#' @example inst/examples/isPackageInstalled.r
 #' @seealso \code{
 #'    \link[rapp.core.library]{isPackageInstalled}
 #' } 

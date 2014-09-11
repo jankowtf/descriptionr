@@ -1,4 +1,4 @@
-context("package")
+context("getPackageVersion-1")
 
 test_that("getPackageVersion", {
 

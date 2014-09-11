@@ -1,3 +1,4 @@
+#' @title
 #' Get Package Name
 #'
 #' @description 
@@ -5,11 +6,15 @@
 #' 
 #' @param from \strong{Signature argument}.
 #'    Object containing source information.
-#' @param ... Further arguments passed to subsequente functions:
+#' @param ... Further arguments passed to subsequent functions/methods.
+#'    In particular:
 #'    \code{\link[rapp.core.description]{getPackageDescription}}.
-#' @author Janko Thyson \email{janko.thyson@@rappster.de}
-#' @references \url{http://www.rappster.de/rapp.core.description}
-#' @example inst/examples/getPackageName.R
+#' @example inst/examples/getPackageName.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export getPackageName
 setGeneric(name="getPackageName", 
   signature = c(
@@ -22,9 +27,21 @@ setGeneric(name="getPackageName",
   standardGeneric("getPackageName")
 })
 
+#' @title
+#' Get Package Name
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageName}}
+#' 
+#' @inheritParams getPackageName
 #' @param from \code{\link{character}}.
-#' @return \code{character}. 
-#' @describeIn getPackageName
+#' @return \code{character}. Package name.
+#' @example inst/examples/getPackageName.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageName}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageName", 
   signature = signature(
@@ -40,9 +57,23 @@ setMethod(f = "getPackageName",
   } 
 )
 
+#' @title
+#' Get Package Name
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageName}}
+#' 
+#' @inheritParams getPackageName
 #' @param from \code{\link{missing}}.  
-#' @return See signature \code{character}.
-#' @describeIn getPackageName
+#' @return See 
+#'    \code{\link[rapp.core.description]{getPackageName-character-method}}.
+#' @example inst/examples/getPackageName.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageName},
+#'    \link[rapp.core.description]{getPackageName-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageName", 
   signature = signature(

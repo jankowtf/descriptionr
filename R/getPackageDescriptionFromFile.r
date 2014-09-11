@@ -1,3 +1,4 @@
+#' @title
 #' Get Package Description From File
 #'
 #' @description 
@@ -22,9 +23,12 @@
 #'    possibly a corresponding warning. 
 #' @param validate \code{logical}.
 #'    Perform validation checks (\code{TRUE}, default) or not (\code{FALSE}).
-#' @author Janko Thyson \email{janko.thyson@@rappster.de}
-#' @references \url{http://www.rappster.de/rapp.core.repos}
-#' @example inst/examples/getPackageDescriptionFromFile.R
+#' @example inst/examples/getPackageDescriptionFromFile.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export getPackageDescriptionFromFile
 setGeneric(name="getPackageDescriptionFromFile", 
   signature = c(
@@ -42,12 +46,24 @@ setGeneric(name="getPackageDescriptionFromFile",
   standardGeneric("getPackageDescriptionFromFile")
 })
 
+#' @title
+#' Get Package Description From File
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' 
+#' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{character}}.  
 #' @param fields \code{\link{character}}.  
 #     A vector giving the tags of fields to return (if other fields occur in 
 #     the file they are ignored).
-#' @return \code{character}. 
-#' @describeIn getPackageDescriptionFromFile
+#' @return TODO.
+#' @example inst/examples/getPackageDescriptionFromFile.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile}
+#' }
+#' @template author
+#' @template references
 #' @export
 #' @import rapp.core.condition
 setMethod(f = "getPackageDescriptionFromFile", 
@@ -162,11 +178,25 @@ setMethod(f = "getPackageDescriptionFromFile",
   } 
 )
 
+#' @title
+#' Get Package Description From File
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' 
+#' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{character}}.  
 #     See signature \code{character,character}
-#' @return See signature \code{character,character}.
-#' @describeIn getPackageDescriptionFromFile
+#' @return See 
+#'    \code{\link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}}.
+#' @example inst/examples/getPackageDescriptionFromFile.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile},
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageDescriptionFromFile", 
   signature = signature(
@@ -194,10 +224,24 @@ setMethod(f = "getPackageDescriptionFromFile",
   } 
 )
 
+#' @title
+#' Get Package Description From File
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' 
+#' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{missing}}.  
-#' @return See signature \code{character,character}.
-#' @describeIn getPackageDescriptionFromFile
+#' @return See 
+#'    \code{\link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}}.
+#' @example inst/examples/getPackageDescriptionFromFile.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile},
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageDescriptionFromFile", 
   signature = signature(
@@ -225,11 +269,25 @@ setMethod(f = "getPackageDescriptionFromFile",
   } 
 )
 
+#' @title
+#' Get Package Description From File
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' 
+#' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @param fields \code{\link{missing}}.  
-#' @return See signature \code{character,character}.
-#' @describeIn getPackageDescriptionFromFile
+#' @return See 
+#'    \code{\link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}}.
+#' @example inst/examples/getPackageDescriptionFromFile.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile},
+#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageDescriptionFromFile", 
   signature = signature(

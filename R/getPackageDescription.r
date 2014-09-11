@@ -23,7 +23,8 @@
 #'    \code{FALSE} (default): these 
 #'    conditions are only reflected by a return value of \code{NA} and 
 #'    possibly a corresponding warning. 
-#' @param ... Further arguments passed to subsequente functions:
+#' @param ... Further arguments passed to subsequent functions/methods.
+#'    In particular:
 #'    \code{\link[utils]{packageDescription}}.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
@@ -52,17 +53,17 @@ setGeneric(name="getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' Retrieves the content of a package's DESCRIPTION file.
+#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
 #' 
 #' @param from \code{\link{character}}.
 #' @param fields \code{\link{character}}.  
 #     A vector giving the tags of fields to return (if other fields occur in 
 #     the file they are ignored).  
-#' @return \code{character}. 
+#' @return \code{character}. Content of \code{DESCRIPTION} file.
+#' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
 #'    \link[rapp.core.description]{getPackageDescription}
 #' }
-#' @example inst/examples/getPackageDescription.r
 #' @template author
 #' @template references
 #' @export
@@ -152,13 +153,14 @@ setMethod(f = "getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' Retrieves the content of a package's DESCRIPTION file.
+#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{character}}.  
 #     See signature \code{character,character}
-#' @return See signature \code{character,character}.
+#' @return See method 
+#'    \code{\link[rapp.core.description]{getPackageDescription-character-character-method}}.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
 #'    \link[rapp.core.description]{getPackageDescription}
@@ -196,7 +198,7 @@ setMethod(f = "getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' Retrieves the content of a package's DESCRIPTION file.
+#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{missing}}.  
@@ -240,7 +242,7 @@ setMethod(f = "getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' Retrieves the content of a package's DESCRIPTION file.
+#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{character}}.  

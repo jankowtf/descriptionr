@@ -1,3 +1,4 @@
+#' @title
 #' Get Package Version
 #'
 #' @description 
@@ -7,9 +8,12 @@
 #'    Object containing source information.
 #' @param ... Further arguments passed to subsequente functions:
 #'    \code{\link[rapp.core.description]{getPackageDescription}}.
-#' @author Janko Thyson \email{janko.thyson@@rappster.de}
-#' @references \url{http://www.rappster.de/rapp.core.description}
-#' @example inst/examples/getPackageVersion.R
+#' @example inst/examples/getPackageVersion.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageVersion-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export getPackageVersion
 setGeneric(name="getPackageVersion", 
   signature = c(
@@ -22,9 +26,21 @@ setGeneric(name="getPackageVersion",
   standardGeneric("getPackageVersion")
 })
 
+#' @title
+#' Get Package Version
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageVersion}}
+#' 
+#' @inheritParams getPackageVersion
 #' @param from \code{\link{character}}.
-#' @return \code{character}. 
-#' @describeIn getPackageVersion
+#' @return \code{\link{character}}. Package version. 
+#' @example inst/examples/getPackageVersion.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageVersion}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageVersion", 
   signature = signature(
@@ -40,9 +56,23 @@ setMethod(f = "getPackageVersion",
   } 
 )
 
+#' @title
+#' Get Package Version
+#' 
+#' @description 
+#' See generic: \code{\link[rapp.core.description]{getPackageVersion}}
+#' 
+#' @inheritParams getPackageVersion
 #' @param from \code{\link{missing}}.  
-#' @return See signature \code{character}.
-#' @describeIn getPackageVersion
+#' @return See 
+#'    \code{\link[rapp.core.description]{getPackageVersion-character-method}}.
+#' @example inst/examples/getPackageVersion.r
+#' @seealso \code{
+#'    \link[rapp.core.description]{getPackageVersion},
+#'    \link[rapp.core.description]{getPackageVersion-character-method}
+#' }
+#' @template author
+#' @template references
 #' @export
 setMethod(f = "getPackageVersion", 
   signature = signature(

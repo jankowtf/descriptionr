@@ -1,4 +1,4 @@
-context("package")
+context("getPackageDescriptionFromFile-1")
 
 test_that("getPackageDescriptionFromFile", {
 
