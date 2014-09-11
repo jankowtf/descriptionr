@@ -55,6 +55,7 @@ setGeneric(name="getPackageDescription",
 #' @description 
 #' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
 #' 
+#' @inheritParams getPackageDescription
 #' @param from \code{\link{character}}.
 #' @param fields \code{\link{character}}.  
 #     A vector giving the tags of fields to return (if other fields occur in 

@@ -1,3 +1,18 @@
+# CHANGES IN rapp.core.description VERSION 0.1.1.1
+
+## NEW FEATURES
+
+## BUG FIXES
+
+- `getPackageDescription()`:
+  - added `@inheritParams`
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+-----
+
 # CHANGES IN rapp.core.description VERSION 0.1.1
 
 Frozen: yes
