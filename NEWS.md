@@ -1,3 +1,19 @@
+# CHANGES IN rapp.core.description VERSION 0.1.1.2
+
+## NEW FEATURES
+
+## BUG FIXES
+
+## MAJOR CHANGES
+
+## MINOR CHANGES
+
+## MISC
+
+- new path version in order to comply with repository conventions
+
+-----
+
 # CHANGES IN rapp.core.description VERSION 0.1.1.1
 
 ## NEW FEATURES
