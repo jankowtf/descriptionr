@@ -1,4 +1,4 @@
-context("getPackageDependencies-1")
+context("getPackageDependencies-A")
 test_that("getPackageDependencies", {
 
   is_testthat <- FALSE

@@ -1,4 +1,4 @@
-context("getPackageDate-1")
+context("getPackageDate-A")
 
 test_that("getPackageDate", {
 
@@ -22,9 +22,7 @@ test_that("getPackageDate", {
   
   ## From package DESCRIPTION file //
   from <- "devtools"
-  expect_warning(
-    expect_is(res <- getPackageDate(from = from), expected)  
-  )
+  expect_equal(res <- getPackageDate(from = from), NA)  
   
   ## Condition handling //
   expect_warning(res <- getPackageDate(from = tempdir()))  
