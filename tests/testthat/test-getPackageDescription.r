@@ -1,4 +1,4 @@
-context("getPackageDescription-1")
+context("getPackageDescription-A")
 
 test_that("getPackageDescription", {
 

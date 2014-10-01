@@ -111,38 +111,62 @@ setMethod(f = "getPackageDescription",
     if (!length(fields)) {
       fields <- NULL
     }
-    out <- packageDescription(
-      pkg = from,
-      fields = fields,
-      drop = drop,
-      encoding = encoding,
-      ...
-    )
-    if (is.na(out) && !is.null(fields)) {
-      desc <- packageDescription(pkg = from)
-      idx <- lapply(fields, grep, names(desc))
-      fields_1 <- unlist(lapply(idx, function(ii) {
-          names(desc)[ii]
-      }))
-      
-      conditionr::signalCondition(
-        condition = "InferringViaRegularExpressionMatch",
-        msg = c(
-          "Inferring correct field names via regular expression match",
-          "Original field names" = fields,
-          "Inferred field names" = fields_1
-        ),
-        ns = "descriptionr",
-        type = "warning"
-      )
-      
+    
+    ## Check if loaded //
+    pkgs_loaded <- .packages(all.available = FALSE)
+    if (from %in% pkgs_loaded) {
       out <- packageDescription(
         pkg = from,
-        fields = fields_1,
+        fields = fields,
         drop = drop,
         encoding = encoding,
         ...
       )
+    } else {
+      from_1 <- file.path(.libPaths()[1], from, "DESCRIPTION")
+      out <- getPackageDescriptionFromFile(
+        from = from_1, 
+        fields = as.character(fields),
+        drop = drop
+      )
+    }
+    
+    ## If no direct matches //
+    if (is.na(out) && !is.null(fields)) {
+      if (from %in% pkgs_loaded) {
+        desc <- packageDescription(pkg = from)
+      } else {
+        from_1 <- file.path(.libPaths()[1], from, "DESCRIPTION")
+        desc <- getPackageDescriptionFromFile(from = from_1)
+      }
+      
+      if (!strict) {
+        fields_1 <- inferDescriptionFieldName(from = desc, pattern = fields)
+        if (length(fields_1)) {
+          conditionr::signalCondition(
+            condition = "InferringViaRegularExpressionMatch",
+            msg = c(
+              "Inferring correct field names via regular expression match",
+              "Original field names" = fields,
+              "Inferred field names" = fields_1
+            ),
+            ns = "descriptionr",
+            type = "warning"
+          )
+          
+          out <- packageDescription(
+            pkg = from,
+            fields = fields_1,
+            drop = drop,
+            encoding = encoding,
+            ...
+          )
+        } else {
+          out <- NA
+        }
+      } else {
+        out <- NA
+      }
     }
   }
   out

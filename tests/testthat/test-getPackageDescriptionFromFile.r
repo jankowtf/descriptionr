@@ -1,5 +1,4 @@
-context("getPackageDescriptionFromFile-1")
-
+context("getPackageDescriptionFromFile-A")
 test_that("getPackageDescriptionFromFile", {
 
   is_testthat <- FALSE
