@@ -2,11 +2,15 @@
 
 ## NEW FEATURES
 
+- added: `inferDescriptionFieldName()`
+
 ## BUG FIXES
 
 ## MAJOR CHANGES
 
 ## MINOR CHANGES
+
+- added: `README.md`
 
 ## MISC
 
