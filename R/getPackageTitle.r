@@ -8,10 +8,10 @@
 #'    Object containing source information.
 #' @param ... Further arguments passed to subsequent functions/methods.
 #'    In particular:
-#'    \code{\link[rapp.core.description]{getPackageDescription}}.
+#'    \code{\link[descriptionr]{getPackageDescription}}.
 #' @example inst/examples/getPackageTitle.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageTitle-character-method}
+#'    \link[descriptionr]{getPackageTitle-character-method}
 #' }
 #' @template author
 #' @template references
@@ -31,14 +31,14 @@ setGeneric(name="getPackageTitle",
 #' Get Package Title
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageTitle}}
+#' See generic: \code{\link[descriptionr]{getPackageTitle}}
 #' 
 #' @inheritParams getPackageTitle
 #' @param from \code{\link{character}}.
 #' @return \code{\link{character}}. Package title. 
 #' @example inst/examples/getPackageTitle.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageTitle}
+#'    \link[descriptionr]{getPackageTitle}
 #' }
 #' @template author
 #' @template references
@@ -61,16 +61,16 @@ setMethod(f = "getPackageTitle",
 #' Get Package Title
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageTitle}}
+#' See generic: \code{\link[descriptionr]{getPackageTitle}}
 #' 
 #' @inheritParams getPackageTitle
 #' @param from \code{\link{missing}}.  
 #' @return See 
-#'    \code{\link[rapp.core.description]{getPackageTitle-character-method}}.
+#'    \code{\link[descriptionr]{getPackageTitle-character-method}}.
 #' @example inst/examples/getPackageTitle.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageTitle},
-#'    \link[rapp.core.description]{getPackageTitle-character-method}
+#'    \link[descriptionr]{getPackageTitle},
+#'    \link[descriptionr]{getPackageTitle-character-method}
 #' }
 #' @template author
 #' @template references

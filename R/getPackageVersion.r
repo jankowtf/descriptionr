@@ -7,10 +7,10 @@
 #' @param from \strong{Signature argument}.
 #'    Object containing source information.
 #' @param ... Further arguments passed to subsequente functions:
-#'    \code{\link[rapp.core.description]{getPackageDescription}}.
+#'    \code{\link[descriptionr]{getPackageDescription}}.
 #' @example inst/examples/getPackageVersion.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageVersion-character-method}
+#'    \link[descriptionr]{getPackageVersion-character-method}
 #' }
 #' @template author
 #' @template references
@@ -30,14 +30,14 @@ setGeneric(name="getPackageVersion",
 #' Get Package Version
 #' 
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageVersion}}
+#' See generic: \code{\link[descriptionr]{getPackageVersion}}
 #' 
 #' @inheritParams getPackageVersion
 #' @param from \code{\link{character}}.
 #' @return \code{\link{character}}. Package version. 
 #' @example inst/examples/getPackageVersion.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageVersion}
+#'    \link[descriptionr]{getPackageVersion}
 #' }
 #' @template author
 #' @template references
@@ -60,16 +60,16 @@ setMethod(f = "getPackageVersion",
 #' Get Package Version
 #' 
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageVersion}}
+#' See generic: \code{\link[descriptionr]{getPackageVersion}}
 #' 
 #' @inheritParams getPackageVersion
 #' @param from \code{\link{missing}}.  
 #' @return See 
-#'    \code{\link[rapp.core.description]{getPackageVersion-character-method}}.
+#'    \code{\link[descriptionr]{getPackageVersion-character-method}}.
 #' @example inst/examples/getPackageVersion.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageVersion},
-#'    \link[rapp.core.description]{getPackageVersion-character-method}
+#'    \link[descriptionr]{getPackageVersion},
+#'    \link[descriptionr]{getPackageVersion-character-method}
 #' }
 #' @template author
 #' @template references

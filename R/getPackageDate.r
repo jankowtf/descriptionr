@@ -8,10 +8,10 @@
 #'    Object containing source information.
 #' @param ... Further arguments passed to subsequent functions/methods.
 #'    In particular: 
-#'    \code{\link[rapp.core.description]{getPackageDate}}.
+#'    \code{\link[descriptionr]{getPackageDate}}.
 #' @example inst/examples/getPackageDate.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDate-character-method}
+#'    \link[descriptionr]{getPackageDate-character-method}
 #' }
 #' @template author
 #' @template references
@@ -31,16 +31,16 @@ setGeneric(name="getPackageDate",
 #' Get Package Date
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDate}}
+#' See generic: \code{\link[descriptionr]{getPackageDate}}
 #' 
 #' @inheritParams getPackageDate
 #' @param from \code{\link{missing}}.  
 #' @return See method 
-#'    \code{\link[rapp.core.description]{getPackageDate-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDate-character-method}}.
 #' @example inst/examples/getPackageDate.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDate}
-#'    \link[rapp.core.description]{getPackageDate-character-method}
+#'    \link[descriptionr]{getPackageDate}
+#'    \link[descriptionr]{getPackageDate-character-method}
 #' }
 #' @template author
 #' @template references
@@ -63,7 +63,7 @@ setMethod(f = "getPackageDate",
 #' Get Package Date
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDate}}
+#' See generic: \code{\link[descriptionr]{getPackageDate}}
 #' 
 #' @inheritParams getPackageDate
 #' @param from \code{\link{character}}.
@@ -71,7 +71,7 @@ setMethod(f = "getPackageDate",
 #'    or \code{\link{data.frame}}.
 #' @example inst/examples/getPackageDate.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDate}
+#'    \link[descriptionr]{getPackageDate}
 #' }
 #' @template author
 #' @template references

@@ -13,10 +13,10 @@
 #'    This controls which type of dependencies should be retrieved
 #' @param ... Further arguments passed to subsequente functions/methods.
 #'    In particular:
-#'    \code{\link[rapp.core.description]{getPackageDescription}}.
+#'    \code{\link[descriptionr]{getPackageDescription}}.
 #' @example inst/examples/getPackageDependencies.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDependencies-character-method}
+#'    \link[descriptionr]{getPackageDependencies-character-method}
 #' }
 #' @template author
 #' @template references
@@ -38,19 +38,19 @@ setGeneric(name="getPackageDependencies",
 #' Get Package Imported Dependencies
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDependencies}}
+#' See generic: \code{\link[descriptionr]{getPackageDependencies}}
 #' 
 #' @inheritParams getPackageDependencies
 #' @param from \code{\link{character}}.
 #' @return \code{character}. Package dependencies. 
 #' @example inst/examples/getPackageDependencies.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDependencies}
+#'    \link[descriptionr]{getPackageDependencies}
 #' }
 #' @template author
 #' @template references
 #' @export
-#' @import rapp.core.condition
+#' @import conditionr
 setMethod(f = "getPackageDependencies", 
   signature = signature(
     from = "character"
@@ -100,13 +100,13 @@ setMethod(f = "getPackageDependencies",
       stringsAsFactors = FALSE
     )
   } else {
-    rapp.core.condition::signalCondition(
+    conditionr::signalCondition(
       condition = "InvalidArgumentValue",
       msg = c(
         "Invalid argument value for 'type'",
         Valid = c("as_is", "names_only", "detailed")
       ),
-      ns = "rapp.core.description",
+      ns = "descriptionr",
       type = "error"
     )
   }
@@ -119,16 +119,16 @@ setMethod(f = "getPackageDependencies",
 #' Get Package Imported Dependencies
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDependencies}}
+#' See generic: \code{\link[descriptionr]{getPackageDependencies}}
 #' 
 #' @inheritParams getPackageDependencies
 #' @param from \code{\link{missing}}.
 #' @return See method
-#'    \code{\link[rapp.core.description]{getPackageDependencies-character-method}} 
+#'    \code{\link[descriptionr]{getPackageDependencies-character-method}} 
 #' @example inst/examples/getPackageDependencies.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDependencies},
-#'    \link[rapp.core.description]{getPackageDependencies-character-method}
+#'    \link[descriptionr]{getPackageDependencies},
+#'    \link[descriptionr]{getPackageDependencies-character-method}
 #' }
 #' @template author
 #' @template references

@@ -37,7 +37,7 @@ setGeneric(name="isPackageInstalled",
 #' Is Package Installed
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{isPackageInstalled}}
+#' See generic: \code{\link[descriptionr]{isPackageInstalled}}
 #' 
 #' @inheritParams isPackageInstalled
 #' @param pkg \code{\link{character}}.  
@@ -76,7 +76,7 @@ setMethod(f = "isPackageInstalled",
 #' Is Package Installed
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{isPackageInstalled}}
+#' See generic: \code{\link[descriptionr]{isPackageInstalled}}
 #' 
 #' @inheritParams isPackageInstalled
 #' @param pkg \code{\link{character}}.  

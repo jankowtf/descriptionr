@@ -25,7 +25,7 @@
 #'    Perform validation checks (\code{TRUE}, default) or not (\code{FALSE}).
 #' @example inst/examples/getPackageDescriptionFromFile.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-method}
+#'    \link[descriptionr]{getPackageDescriptionFromFile-character-method}
 #' }
 #' @template author
 #' @template references
@@ -50,7 +50,7 @@ setGeneric(name="getPackageDescriptionFromFile",
 #' Get Package Description From File
 #' 
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' See generic: \code{\link[descriptionr]{getPackageDescriptionFromFile}}
 #' 
 #' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{character}}.  
@@ -60,12 +60,12 @@ setGeneric(name="getPackageDescriptionFromFile",
 #' @return TODO.
 #' @example inst/examples/getPackageDescriptionFromFile.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile}
+#'    \link[descriptionr]{getPackageDescriptionFromFile}
 #' }
 #' @template author
 #' @template references
 #' @export
-#' @import rapp.core.condition
+#' @import conditionr
 setMethod(f = "getPackageDescriptionFromFile", 
   signature = signature(
     from = "character",
@@ -85,14 +85,14 @@ setMethod(f = "getPackageDescriptionFromFile",
   if (validate) {
     is_dir <- file.info(from)$isdir
     if (is.na(is_dir) || is_dir) {
-      rapp.core.condition::signalCondition(
+      conditionr::signalCondition(
         condition = "InvalidArgumentValue",
         msg = c(
           "Invalid argument value for 'from'",
           Details = "expecting file path of DESCRIPTION file",
           Value = from
         ),
-        ns = "rapp.core.description",
+        ns = "descriptionr",
         type = ifelse(strict, "error", "warning")
       )
       return(NA)
@@ -108,14 +108,14 @@ setMethod(f = "getPackageDescriptionFromFile",
   if (file.exists(from)) {
     desc <- readLines(from)
     if (!length(desc)) {
-      rapp.core.condition::signalCondition(
+      conditionr::signalCondition(
         condition = "InvalidDescriptionContent",
         msg = c(
           "Invalid DESCRIPTION content",
           Details = "emtpy file",
           Path = from
         ),
-        ns = "rapp.core.description",
+        ns = "descriptionr",
         type = "error"
       )
     }
@@ -153,13 +153,13 @@ setMethod(f = "getPackageDescriptionFromFile",
   }
   
   if ((from == "") || (length(out) == 0)) {
-    rapp.core.condition::signalCondition(
+    conditionr::signalCondition(
       condition = "InvalidPathToDescriptionFile",
       msg = c(
         "Invalid path to DESCRIPTION file",
         Path = from_0
       ),
-      ns = "rapp.core.description",
+      ns = "descriptionr",
       type = ifelse(strict, "error", "warning")
     )
     return(NA)
@@ -182,18 +182,18 @@ setMethod(f = "getPackageDescriptionFromFile",
 #' Get Package Description From File
 #' 
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' See generic: \code{\link[descriptionr]{getPackageDescriptionFromFile}}
 #' 
 #' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @return See 
-#'    \code{\link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDescriptionFromFile-character-character-method}}.
 #' @example inst/examples/getPackageDescriptionFromFile.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile},
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}
+#'    \link[descriptionr]{getPackageDescriptionFromFile},
+#'    \link[descriptionr]{getPackageDescriptionFromFile-character-character-method}
 #' }
 #' @template author
 #' @template references
@@ -228,17 +228,17 @@ setMethod(f = "getPackageDescriptionFromFile",
 #' Get Package Description From File
 #' 
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' See generic: \code{\link[descriptionr]{getPackageDescriptionFromFile}}
 #' 
 #' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{missing}}.  
 #' @return See 
-#'    \code{\link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDescriptionFromFile-character-character-method}}.
 #' @example inst/examples/getPackageDescriptionFromFile.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile},
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}
+#'    \link[descriptionr]{getPackageDescriptionFromFile},
+#'    \link[descriptionr]{getPackageDescriptionFromFile-character-character-method}
 #' }
 #' @template author
 #' @template references
@@ -273,18 +273,18 @@ setMethod(f = "getPackageDescriptionFromFile",
 #' Get Package Description From File
 #' 
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescriptionFromFile}}
+#' See generic: \code{\link[descriptionr]{getPackageDescriptionFromFile}}
 #' 
 #' @inheritParams getPackageDescriptionFromFile
 #' @param from \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @param fields \code{\link{missing}}.  
 #' @return See 
-#'    \code{\link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDescriptionFromFile-character-character-method}}.
 #' @example inst/examples/getPackageDescriptionFromFile.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile},
-#'    \link[rapp.core.description]{getPackageDescriptionFromFile-character-character-method}
+#'    \link[descriptionr]{getPackageDescriptionFromFile},
+#'    \link[descriptionr]{getPackageDescriptionFromFile-character-character-method}
 #' }
 #' @template author
 #' @template references

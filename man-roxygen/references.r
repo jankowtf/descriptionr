@@ -1,1 +1,1 @@
-#' @references \url{http://www.rappster.de/rapp/rapp.core.description}
+#' @references \url{http://www.rappster.de/rapp/descriptionr}

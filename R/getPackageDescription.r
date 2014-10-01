@@ -28,7 +28,7 @@
 #'    \code{\link[utils]{packageDescription}}.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescription-character-character-method}
+#'    \link[descriptionr]{getPackageDescription-character-character-method}
 #' }
 #' @template author
 #' @template references
@@ -53,7 +53,7 @@ setGeneric(name="getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
+#' See generic: \code{\link[descriptionr]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{character}}.
@@ -63,12 +63,12 @@ setGeneric(name="getPackageDescription",
 #' @return \code{character}. Content of \code{DESCRIPTION} file.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescription}
+#'    \link[descriptionr]{getPackageDescription}
 #' }
 #' @template author
 #' @template references
 #' @export
-#' @import rapp.core.condition
+#' @import conditionr
 setMethod(f = "getPackageDescription", 
   signature = signature(
       from = "character",
@@ -86,13 +86,13 @@ setMethod(f = "getPackageDescription",
   if (!isPackageInstalled(pkg = from, simplified = TRUE)) {
     is_dir <- file.info(from)$isdir
     if (is.na(is_dir)) {
-      rapp.core.condition::signalCondition(
+      conditionr::signalCondition(
         condition = "InvalidArgumentValue",
         msg = c(
           "Invalid argument value for 'from'",
           Details = "neither package name nor directory path"
         ),
-        ns = "rapp.core.description",
+        ns = "descriptionr",
         type = "error"
       )
     }  
@@ -125,14 +125,14 @@ setMethod(f = "getPackageDescription",
           names(desc)[ii]
       }))
       
-      rapp.core.condition::signalCondition(
+      conditionr::signalCondition(
         condition = "InferringViaRegularExpressionMatch",
         msg = c(
           "Inferring correct field names via regular expression match",
           "Original field names" = fields,
           "Inferred field names" = fields_1
         ),
-        ns = "rapp.core.description",
+        ns = "descriptionr",
         type = "warning"
       )
       
@@ -154,17 +154,17 @@ setMethod(f = "getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
+#' See generic: \code{\link[descriptionr]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @return See method 
-#'    \code{\link[rapp.core.description]{getPackageDescription-character-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDescription-character-character-method}}.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescription}
+#'    \link[descriptionr]{getPackageDescription}
 #' }
 #' @template author
 #' @template references
@@ -199,16 +199,16 @@ setMethod(f = "getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
+#' See generic: \code{\link[descriptionr]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{missing}}.  
 #' @param fields \code{\link{missing}}.  
 #' @return See method 
-#'    \code{\link[rapp.core.description]{getPackageDescription-character-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDescription-character-character-method}}.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescription}
+#'    \link[descriptionr]{getPackageDescription}
 #' }
 #' @template author
 #' @template references
@@ -243,17 +243,17 @@ setMethod(f = "getPackageDescription",
 #' Get Package Description
 #'
 #' @description 
-#' See generic: \code{\link[rapp.core.description]{getPackageDescription}}
+#' See generic: \code{\link[descriptionr]{getPackageDescription}}
 #' 
 #' @inheritParams getPackageDescription
 #' @param from \code{\link{character}}.  
 #     See signature \code{character,character}
 #' @param fields \code{\link{missing}}.  
 #' @return See method 
-#'    \code{\link[rapp.core.description]{getPackageDescription-character-character-method}}.
+#'    \code{\link[descriptionr]{getPackageDescription-character-character-method}}.
 #' @example inst/examples/getPackageDescription.r
 #' @seealso \code{
-#'    \link[rapp.core.description]{getPackageDescription}
+#'    \link[descriptionr]{getPackageDescription}
 #' }
 #' @template author
 #' @template references

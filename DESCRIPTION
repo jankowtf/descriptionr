@@ -1,4 +1,4 @@
-Package: rapp.core.description
+Package: descriptionr
 Type: Package
 Title: Extended processing features for package DESCRIPTION files
 Version: 0.1.1.2
@@ -14,4 +14,4 @@ Roxygen: list(wrap = FALSE)
 NeedsCompilation: no
 Repository: CRAN
 Imports:
-    rapp.core.condition
+    conditionr

@@ -8,7 +8,7 @@ test_that("getPackageName", {
   }
   
   ## From project DESCRIPTION file //
-  expected <- "rapp.core.description"
+  expected <- "descriptionr"
   expect_equal(res <- getPackageName(), expected)  
   
   from <- "DESCRIPTION"

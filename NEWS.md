@@ -1,4 +1,4 @@
-# CHANGES IN rapp.core.description VERSION 0.1.1.2
+# CHANGES IN descriptionr VERSION 0.1.1.2
 
 ## NEW FEATURES
 
@@ -14,7 +14,7 @@
 
 -----
 
-# CHANGES IN rapp.core.description VERSION 0.1.1.1
+# CHANGES IN descriptionr VERSION 0.1.1.1
 
 ## NEW FEATURES
 
@@ -29,7 +29,7 @@
 
 -----
 
-# CHANGES IN rapp.core.description VERSION 0.1.1
+# CHANGES IN descriptionr VERSION 0.1.1
 
 Frozen: yes
 Corresponds to patch version: `v0.1.0.4'
@@ -44,7 +44,7 @@ Corresponds to patch version: `v0.1.0.4'
 
 -----
 
-# CHANGES IN rapp.core.condition VERSION 0.1.0.4
+# CHANGES IN conditionr VERSION 0.1.0.4
 
 ## NEW FEATURES
 

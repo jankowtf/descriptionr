@@ -1,3 +1,3 @@
 require("devtools")
-setwd("q:/home/wsp/rapp2/rapp.core.description")
+setwd("q:/home/wsp/rapp2/descriptionr")
 devtools::load_all()
